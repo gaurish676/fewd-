@@ -1,35 +1,83 @@
-body,h1,h2,p{
+/* General Reset */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
-header{
+
+/* Header Styling */
+header {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
 }
-main{
+
+/* Main Section Styling */
+main {
     padding: 2rem;
 }
 
-.profile{
-display: flex;
-align-items: center;
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Ensures proper alignment on small screens */
 }
-.photo{
+
+/* Photo Styling */
+.photo {
     flex: 1;
-    padding: 0 2rem;
 }
-.photo img{
+
+.photo img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.bio{
-    flex:2;
+
+/* Bio Section Styling */
+.bio {
+    flex: 2;
+}
+
+.bio h2 {
+    margin-bottom: 0.5rem;
+}
+
+.bio p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo img {
+        max-width: 200px;
+        margin: 0 auto;
+    }
 }
